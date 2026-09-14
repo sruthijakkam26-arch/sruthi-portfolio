@@ -1356,3 +1356,30 @@ project-card::before {
     transition: 0.35s;
 
 }
+/* MOBILE PROJECT FIX */
+@media (max-width: 600px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+        min-width: 0;
+        grid-column: span 1 !important;
+        box-sizing: border-box;
+    }
+
+    .featured-project {
+        grid-column: span 1 !important;
+    }
+}
+@media (max-width: 600px) {
+    .projects-grid,
+    .project-card {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+}
